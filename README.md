@@ -149,13 +149,17 @@ mobile-ui
 
 ```
 react-native-draggable-list/
-├── src/
-│   └── DraggableList.js (optional if making reusable component)
-├── example/
-│   └── App.js
-├── assets/
-│   └── demo.gif
-└── README.md
+├── app/
+│   ├── (pages)/
+│   │   ├── index.jsx
+│   │   └── _layout.jsx
+│   ├── assets/
+│   │   └── demo.gif
+│   └── _globals.css
+├── README.md
+├── package.json
+├── tailwind.config.js
+└── app.json
 ```
 
 ---
