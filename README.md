@@ -23,9 +23,13 @@ Perfect for:
 
 ---
 
+
 ## 📸 Demo
 
-(Add a GIF or screenshot here)
+<p align="center">
+  <img src="./assets/demo.gif" width="300" />
+</p>
+
 
 ```
 /assets/demo.gif
