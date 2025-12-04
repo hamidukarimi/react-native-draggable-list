@@ -17,7 +17,11 @@ export default function SimpleDraggableList() {
       <View
         style={[
           styles.itemContainer,
-          { backgroundColor: isActive ? "#d1d1d1" : "#f2f2f2" },
+          {
+            backgroundColor: isActive ? "#2e2e2e" : "#1e1e1e",
+            transform: [{ scale: isActive ? 1.02 : 1 }],
+            shadowOpacity: isActive ? 0.4 : 0.2,
+          },
         ]}
       >
         <Text style={styles.label}>{item.label}</Text>
@@ -26,9 +30,9 @@ export default function SimpleDraggableList() {
         <TouchableOpacity
           onLongPress={drag}
           delayLongPress={120}
-          hitSlop={10} // bigger touch area for better UX
+          hitSlop={10}
         >
-          <Feather name="menu" size={22} color="#333" />
+          <Feather name="menu" size={22} color="#bbb" />
         </TouchableOpacity>
       </View>
     );
@@ -49,22 +53,27 @@ export default function SimpleDraggableList() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
+    backgroundColor: "#000", // Full dark background
+    paddingHorizontal: 14,
+    paddingVertical: 14,
   },
   itemContainer: {
-    height: 60,
+    height: 64,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 15,
-    borderRadius: 10,
-    marginBottom: 8,
-    elevation: 1,
+    paddingHorizontal: 18,
+    borderRadius: 14,
+    marginBottom: 12,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 8,
+    elevation: 3, // Android shadow
   },
   label: {
-    fontSize: 16,
-    fontWeight: "500",
-    color: "#000",
+    fontSize: 17,
+    fontWeight: "600",
+    color: "#f5f5f5",
   },
 });
